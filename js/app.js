@@ -79,6 +79,22 @@ const squares = document.querySelectorAll('.reviewVideos');
 const body = document.getElementById('body')
 
 /*----------------------------- Event Listeners -----------------------------*/
-
+// swiftBtn.addEventListener('click', ()=> {
+//     fetch("https://api.taylor.rest/")
+//     .then((response) => {
+//         console.log(response)
+//         return response.json()
+//     })
+//     .then((data) => {
+//         let newQuote = {}
+//         newQuote["artist"] = "T-Swift"
+//         newQuote["quote"] = data.quote
+//         quotes.push(newQuote)
+//         render();
+//     })
+//     .catch((err) => {
+//         console.log(err)
+//     })
+// })
 
 /*-------------------------------- Functions --------------------------------*/
