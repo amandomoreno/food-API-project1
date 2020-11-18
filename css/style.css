@@ -62,6 +62,12 @@ body {
     justify-content: center;
   }
 
+  #randomizer{
+      width: 75px;
+      height: 75px;
+      border-radius: 50%;
+  }
+
   aside{
     display: flex;
     flex-wrap: wrap;
