@@ -69,11 +69,14 @@
 
 
 /*---------------------------- Variables (state) ----------------------------*/
-
+const foodImg = []
 
 
 /*------------------------ Cached Element References ------------------------*/
-
+const randBtn = document.getElementById('randomizer')
+const carDiv = document.querySelectorAll('.carousel')
+const squares = document.querySelectorAll('.reviewVideos');
+const body = document.getElementById('body')
 
 /*----------------------------- Event Listeners -----------------------------*/
 
