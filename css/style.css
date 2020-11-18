@@ -23,7 +23,7 @@ body {
       Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     margin: 0;
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: column wrap;
     justify-content: center;
     min-width: 320px;
     --body-bg: #e9c318;
@@ -42,24 +42,27 @@ body {
   h1{
       background-color: var(--header-bg);
       width: 100%;
+      min-height: 50px;
       min-width: 320px;
-      flex: 0 1 375px;
       font-size: 4rem;
+      margin: auto;
+      padding: 10px;
   }
 
   section{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    place-items: center;
     width: 75%;
   }
 
   .carousel{
-    
+    width: 100%;
     min-width: 320px;
     flex: 0 1 375px;
     font-size: 2rem;
-    justify-content: center;
+    
   }
 
   #randomizer{

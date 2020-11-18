@@ -97,4 +97,26 @@ const body = document.getElementById('body')
 //     })
 // })
 
+randBtn.addEventListener('click', ()=> {
+    fetch("https://foodish-api.herokuapp.com/api/images/burger")
+    fetch("https://foodish-api.herokuapp.com/api/images/biryani")
+    fetch("https://foodish-api.herokuapp.com/api/images/dosa")
+    fetch("https://foodish-api.herokuapp.com/api/images/idly")
+    fetch("https://foodish-api.herokuapp.com/api/images/pizza")
+    .then((response) => {
+        console.log(response)
+        return response.json()
+    })
+    .then((data) => {
+                let newImage = {}
+                newImage["cat"] = "food"
+                newImage["image"] = data.image
+                foodImg.push(newImage)
+                render();
+    })
+    .catch((err) => {
+      console.log(err)
+     })
+  })
+
 /*-------------------------------- Functions --------------------------------*/
