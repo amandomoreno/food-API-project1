@@ -39,47 +39,85 @@ body {
     --serif: 'Playfair Display', serif; */
 }
 
-  h1{
-      background-color: var(--header-bg);
-      width: 100%;
-      min-height: 50px;
-      min-width: 320px;
-      font-size: 4rem;
-      margin: auto;
-      padding: 10px;
-  }
+    h1{
+        background-color: var(--header-bg);
+        width: 100%;
+        min-height: 50px;
+        min-width: 320px;
+        font-size: 4rem;
+        margin: auto;
+        padding: 10px;
+    }
 
-  section{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    place-items: center;
-    width: 75%;
-  }
+    #roulette{
+        width: 75%;
+        height: 75%;
+        min-width: 275px;
+        min-height: 275px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        font-size: 2rem;
+        background-color: #3e3e3e;
+        border-radius: 50%;
+        justify-self: center;
+        justify-content: space-evenly;
+        margin: 30px auto;
+        align-content: center;
+    }
 
-  .carousel{
-    width: 100%;
-    min-width: 320px;
-    flex: 0 1 375px;
-    font-size: 2rem;
-    
-  }
+    #cat1{
+        background-color: white;
+        height: 7rem;
+        width: 7rem;
+        border-radius: 50%;
+    }
 
-  #randomizer{
-      width: 75px;
-      height: 75px;
-      border-radius: 50%;
-  }
+    #cat2{
+        background-color: white;
+        height: 7rem;
+        width: 7rem;
+        border-radius: 50%;
+    }
 
-  aside{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 75%;
-  }
+    #cat3{
+        background-color: white;
+        height: 7rem;
+        width: 7rem;
+        border-radius: 50%;
+    }
+
+    #cat4{
+        background-color: white;
+        height: 7rem;
+        width: 7rem;
+        border-radius: 50%;
+    }
+
+    #cat5{
+        background-color: white;
+        height: 7rem;
+        width: 7rem;
+        border-radius: 50%;
+
+    }
+
+    #randomizer{
+        height: 5.5rem;
+        width: 5.5rem;
+        border-radius: 50%;
+        justify-self: center;
+    }
+
+    aside{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 75%;
+    }
   
-  .reviewVideos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+    .reviewVideos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
