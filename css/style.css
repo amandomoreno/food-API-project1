@@ -116,8 +116,21 @@ body {
         width: 75%;
     }
   
-    .reviewVideos {
+    #reviews{
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 75%;
+        height: 400px;
+        margin-top: 15px;
+        align-self: center;
+        background-color: black;
+    }
+
+    .reviewVideos {
         justify-content: center;
+    }
+
+    #foodFacts {
+        color: white;
     }
