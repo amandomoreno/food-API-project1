@@ -79,7 +79,7 @@ const foodImg = []
 /*------------------------ Cached Element References ------------------------*/
 const randBtn = document.getElementById('randomizer')
 const carDiv = document.querySelectorAll('.carousel')
-const reviewVid = document.querySelectorAll('.reviewVideos');
+const adviseSlip = document.querySelectorAll('.advice');
 const body = document.getElementById('body')
 
 /*----------------------------- Event Listeners -----------------------------*/
@@ -179,8 +179,8 @@ randBtn.addEventListener('click', ()=> {
      });
 })
 
-reviewVid.addEventListener('click', ()=> {
-    fetch("https://foodish-api.herokuapp.com/api/images/biryani")
+adviseSlip.addEventListener('click', ()=> {
+    fetch("https://api.adviceslip.com/advice")
     .then((response) => {
         console.log(response)
         return response.json()
@@ -194,7 +194,8 @@ reviewVid.addEventListener('click', ()=> {
     })
     .catch((err) => {
       console.log(err)
-     });
+    });
+})    
 /*-------------------------------- Functions --------------------------------*/
 function render() {
     container.innerHTML = ""
