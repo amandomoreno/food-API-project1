@@ -157,7 +157,7 @@ randBtn.addEventListener('click', ()=> {
     .then((data) => {
                 let newImage = {}
                 newImage["cat"] = "pizza"
-                newImage["image"] = data.image
+                newImage["image"] = data.url
                 pizzaImg.push(newImage)
                 render();
     })
@@ -183,6 +183,16 @@ adviseBtn.addEventListener('click', ()=> {
     });
 })    
 /*-------------------------------- Functions --------------------------------*/
+function appendImg(image, cat) {
+    let newContainer = document.createElement("img")
+    newContainer.innerHTML = `
+                        <div class="image h-100" id="${cat.toLowerCase()}">
+                        <img id="pick" class="getPick" src="${image}" alt="randomizer-picks">
+                            </div>    
+                        `
+    container.appendChild(newDiv)
+}
+
 //function for second APi
 function appendDiv(advice, artist, idx) {
     let newDiv = document.createElement("div")
@@ -210,7 +220,9 @@ function render() {
     slip.innerHTML = ""
     advices.forEach((advice, idx) => {
         appendDiv(advice["advise"], advice["artist"], idx)
-    })
+    });
+    container.innerHTML = ""
+    allImages.forEach((image, idx))
 }
 
 // function deleteAdvise(idx){
