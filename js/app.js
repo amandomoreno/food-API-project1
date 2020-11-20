@@ -194,8 +194,7 @@ function appendDiv(advice, artist, idx) {
                                     <footer class="blockquote-footer">${artist}</footer>
                                 </blockquote>
                             </div>
-                            <button id="delButton" class="btn" onClick={deleteAdvice(${idx})}>X</button>
-                        </div>    
+                            </div>    
                         `
     slip.appendChild(newDiv)
 }
@@ -214,7 +213,7 @@ function render() {
     })
 }
 
-function deleteAdvise(idx){
-    advises.splice(idx, 1)
-    render()
-}
+// function deleteAdvise(idx){
+//     advices.splice(idx, 1)
+//     render()
+// }
