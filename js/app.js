@@ -79,11 +79,6 @@ const advise = []
 
 /*------------------------ Cached Element References ------------------------*/
 const randBtn = document.getElementById('randomizer')
-const catDiv1 = document.getElementById('cat1')
-const catDiv2 = document.getElementById('cat2')
-const catDiv3 = document.getElementById('cat3')
-const catDiv4 = document.getElementById('cat4')
-const catDiv5 = document.getElementById('cat5')
 const adviseBtn = document.getElementById('adviceButton');
 const body = document.getElementById('body')
 
