@@ -183,7 +183,6 @@ randBtn.addEventListener('click', ()=> {
 adviseBtn.addEventListener('click', ()=> {
     fetch("https://api.adviceslip.com/advice")
     .then((response) => {
-        console.log(response)
         return response.json()
     })
     .then((data) => {
@@ -203,4 +202,19 @@ function render() {
     categories.forEach((cat, idx) => {
         appendDiv(cat["image"], cat["cat"], idx)
     })
+}
+
+function appendDiv(advice, artist) {
+    let newDiv = document.createElement("div")
+    newDiv.innerHTML = `
+                        <div class="card h-100" id="${artist.toLowerCase()}">
+                            <div class="card-body">
+                                <blockquote class="blockquote mb-0">
+                                    <p>${advice}</p>
+                                    <footer class="blockquote-footer">${artist}</footer>
+                                </blockquote>
+                            </div>
+                        </div>    
+                        `
+    container.appendChild(newDiv)
 }
