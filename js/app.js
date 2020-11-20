@@ -184,95 +184,96 @@ adviseBtn.addEventListener('click', ()=> {
     });
 })    
 /*-------------------------------- Functions --------------------------------*/
-function biryaniCat() {
-    fetch("https://foodish-api.herokuapp.com/api/images/biryani")
-    .then((response) => {
-        console.log(response)
-        return response.json()
-    })
-    .then((data) => {
-                let newImage = {}
-                newImage["cat"] = "biryani"
-                newImage["image"] = data.image
-                biryaniImg.push(newImage)
-                render();
-    })
-    .catch((err) => {
-      console.log(err)
-     });
-};
+// function biryaniCat() {
+//     fetch("https://foodish-api.herokuapp.com/api/images/biryani")
+//     .then((response) => {
+//         console.log(response)
+//         return response.json()
+//     })
+//     .then((data) => {
+//         console.log(data)
+//                 // let newImage = {}
+//                 // newImage["cat"] = "biryani"
+//                 // newImage["image"] = data.image
+//                 // biryaniImg.push(newImage)
+//                 // render();
+//     })
+//     .catch((err) => {
+//       console.log(err)
+//      });
+// };
 
-function burgerCat() {
-    fetch("https://foodish-api.herokuapp.com/api/images/burger")
-    .then((response) => {
-        console.log(response)
-        return response.json()
-    })
-    .then((data) => {
-                let newImage = {}
-                newImage["cat"] = "burger"
-                newImage["image"] = data.image
-                burgerImg.push(newImage)
-                render();
-    })
-    .catch((err) => {
-      console.log(err)
-     });    
-};
+// function burgerCat() {
+//     fetch("https://foodish-api.herokuapp.com/api/images/burger")
+//     .then((response) => {
+//         console.log(response)
+//         return response.json()
+//     })
+//     .then((data) => {
+//                 let newImage = {}
+//                 newImage["cat"] = "burger"
+//                 newImage["image"] = data.image
+//                 burgerImg.push(newImage)
+//                 render();
+//     })
+//     .catch((err) => {
+//       console.log(err)
+//      });    
+// };
 
-function dosaCat() {
-    fetch("https://foodish-api.herokuapp.com/api/images/dosa")
-    .then((response) => {
-        console.log(response)
-        return response.json()
-    })
-    .then((data) => {
-                let newImage = {}
-                newImage["cat"] = "dosa"
-                newImage["image"] = data.image
-                dosaImg.push(newImage)
-                render();
-    })
-    .catch((err) => {
-      console.log(err)
-     });     
-};
+// function dosaCat() {
+//     fetch("https://foodish-api.herokuapp.com/api/images/dosa")
+//     .then((response) => {
+//         console.log(response)
+//         return response.json()
+//     })
+//     .then((data) => {
+//                 let newImage = {}
+//                 newImage["cat"] = "dosa"
+//                 newImage["image"] = data.image
+//                 dosaImg.push(newImage)
+//                 render();
+//     })
+//     .catch((err) => {
+//       console.log(err)
+//      });     
+// };
 
-function idlyCat() {
-    fetch("https://foodish-api.herokuapp.com/api/images/idly")
-    .then((response) => {
-        console.log(response)
-        return response.json()
-    })
-    .then((data) => {
-                let newImage = {}
-                newImage["cat"] = "idly"
-                newImage["image"] = data.image
-                idlyImg.push(newImage)
-                render();
-    })
-    .catch((err) => {
-      console.log(err)
-     });     
-};
+// function idlyCat() {
+//     fetch("https://foodish-api.herokuapp.com/api/images/idly")
+//     .then((response) => {
+//         console.log(response)
+//         return response.json()
+//     })
+//     .then((data) => {
+//                 let newImage = {}
+//                 newImage["cat"] = "idly"
+//                 newImage["image"] = data.image
+//                 idlyImg.push(newImage)
+//                 render();
+//     })
+//     .catch((err) => {
+//       console.log(err)
+//      });     
+// };
 
-function pizzaCat() {
-    fetch("https://foodish-api.herokuapp.com/api/images/pizza")
-    .then((response) => {
-        console.log(response)
-        return response.json()
-    })
-    .then((data) => {
-                let newImage = {}
-                newImage["cat"] = "pizza"
-                newImage["image"] = data.image
-                pizzaImg.push(newImage)
-                render();
-    })
-    .catch((err) => {
-      console.log(err)
-     });     
-};
+// function pizzaCat() {
+//     fetch("https://foodish-api.herokuapp.com/api/images/pizza")
+//     .then((response) => {
+//         console.log(response)
+//         return response.json()
+//     })
+//     .then((data) => {
+//                 let newImage = {}
+//                 newImage["cat"] = "pizza"
+//                 newImage["image"] = data.image
+//                 pizzaImg.push(newImage)
+//                 render();
+//     })
+//     .catch((err) => {
+//       console.log(err)
+//      });     
+// };
 
 function render() {
     container.innerHTML = ""
@@ -281,18 +282,20 @@ function render() {
     })
 }
 
-function appendDiv(advice, artist) {
-    let newDiv = document.createElement("div")
-    newDiv.innerHTML = `
-                        <div class="card h-100" id="${artist.toLowerCase()}">
-                            <div class="card-body">
-                                <blockquote class="blockquote mb-0">
-                                    <p>${advice}</p>
-                                    <footer class="blockquote-footer">${artist}</footer>
-                                </blockquote>
-                            </div>
-                        </div>    
-                        `
-    container.appendChild(newDiv)
-}
+//function for second APi
+
+// function appendDiv(advice, artist) {
+//     let newDiv = document.createElement("div")
+//     newDiv.innerHTML = `
+//                         <div class="card h-100" id="${artist.toLowerCase()}">
+//                             <div class="card-body">
+//                                 <blockquote class="blockquote mb-0">
+//                                     <p>${advice}</p>
+//                                     <footer class="blockquote-footer">${artist}</footer>
+//                                 </blockquote>
+//                             </div>
+//                         </div>    
+//                         `
+//     container.appendChild(newDiv)
+// }
 
