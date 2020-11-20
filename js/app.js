@@ -69,13 +69,17 @@
 
 
 /*---------------------------- Variables (state) ----------------------------*/
+const burgerImg = []
+const biryaniImg = []
+const foodImg = []
+const foodImg = []
 const foodImg = []
 
 
 /*------------------------ Cached Element References ------------------------*/
 const randBtn = document.getElementById('randomizer')
 const carDiv = document.querySelectorAll('.carousel')
-const squares = document.querySelectorAll('.reviewVideos');
+const reviewVid = document.querySelectorAll('.reviewVideos');
 const body = document.getElementById('body')
 
 /*----------------------------- Event Listeners -----------------------------*/
@@ -98,21 +102,6 @@ const body = document.getElementById('body')
 // })
 
 randBtn.addEventListener('click', ()=> {
-    fetch("https://foodish-api.herokuapp.com/api/images/burger")
-    .then((response) => {
-        console.log(response)
-        return response.json()
-    })
-    .then((data) => {
-                let newImage = {}
-                newImage["cat"] = "food"
-                newImage["image"] = data.image
-                foodImg.push(newImage)
-                render();
-    })
-    .catch((err) => {
-      console.log(err)
-     })
     fetch("https://foodish-api.herokuapp.com/api/images/biryani")
     .then((response) => {
         console.log(response)
@@ -120,14 +109,29 @@ randBtn.addEventListener('click', ()=> {
     })
     .then((data) => {
                 let newImage = {}
-                newImage["cat"] = "food"
+                newImage["cat"] = "biryani"
                 newImage["image"] = data.image
-                foodImg.push(newImage)
+                biryaniImg.push(newImage)
                 render();
     })
     .catch((err) => {
       console.log(err)
-     })
+     });
+    fetch("https://foodish-api.herokuapp.com/api/images/burger")
+    .then((response) => {
+        console.log(response)
+        return response.json()
+    })
+    .then((data) => {
+                let newImage = {}
+                newImage["cat"] = "burger"
+                newImage["image"] = data.image
+                burgerImg.push(newImage)
+                render();
+    })
+    .catch((err) => {
+      console.log(err)
+     });
     fetch("https://foodish-api.herokuapp.com/api/images/dosa")
     .then((response) => {
         console.log(response)
@@ -135,14 +139,14 @@ randBtn.addEventListener('click', ()=> {
     })
     .then((data) => {
                 let newImage = {}
-                newImage["cat"] = "food"
+                newImage["cat"] = "dosa"
                 newImage["image"] = data.image
-                foodImg.push(newImage)
+                dosaImg.push(newImage)
                 render();
     })
     .catch((err) => {
       console.log(err)
-     })
+     });
     fetch("https://foodish-api.herokuapp.com/api/images/idly")
     .then((response) => {
         console.log(response)
@@ -150,14 +154,14 @@ randBtn.addEventListener('click', ()=> {
     })
     .then((data) => {
                 let newImage = {}
-                newImage["cat"] = "food"
+                newImage["cat"] = "idly"
                 newImage["image"] = data.image
-                foodImg.push(newImage)
+                idlyImg.push(newImage)
                 render();
     })
     .catch((err) => {
       console.log(err)
-     })
+     });
     fetch("https://foodish-api.herokuapp.com/api/images/pizza")
     .then((response) => {
         console.log(response)
@@ -165,15 +169,32 @@ randBtn.addEventListener('click', ()=> {
     })
     .then((data) => {
                 let newImage = {}
-                newImage["cat"] = "food"
+                newImage["cat"] = "pizza"
                 newImage["image"] = data.image
-                foodImg.push(newImage)
+                pizzaImg.push(newImage)
                 render();
     })
     .catch((err) => {
       console.log(err)
-     })
+     });
 })
+
+reviewVid.addEventListener('click', ()=> {
+    fetch("https://foodish-api.herokuapp.com/api/images/biryani")
+    .then((response) => {
+        console.log(response)
+        return response.json()
+    })
+    .then((data) => {
+                let newImage = {}
+                newImage["cat"] = "biryani"
+                newImage["image"] = data.image
+                biryaniImg.push(newImage)
+                render();
+    })
+    .catch((err) => {
+      console.log(err)
+     });
 /*-------------------------------- Functions --------------------------------*/
 function render() {
     container.innerHTML = ""
