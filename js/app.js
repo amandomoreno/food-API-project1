@@ -79,30 +79,17 @@ const advise = []
 
 /*------------------------ Cached Element References ------------------------*/
 const randBtn = document.getElementById('randomizer')
-const carDiv = document.querySelectorAll('.carousel')
+const catDiv1 = document.getElementById('cat1')
+const catDiv2 = document.getElementById('cat2')
+const catDiv3 = document.getElementById('cat3')
+const catDiv4 = document.getElementById('cat4')
+const catDiv5 = document.getElementById('cat5')
 const adviseBtn = document.getElementById('adviceButton');
 const body = document.getElementById('body')
 
 /*----------------------------- Event Listeners -----------------------------*/
-// swiftBtn.addEventListener('click', ()=> {
-//     fetch("https://api.taylor.rest/")
-//     .then((response) => {
-//         console.log(response)
-//         return response.json()
-//     })
-//     .then((data) => {
-//         let newQuote = {}
-//         newQuote["artist"] = "T-Swift"
-//         newQuote["quote"] = data.quote
-//         quotes.push(newQuote)
-//         render();
-//     })
-//     .catch((err) => {
-//         console.log(err)
-//     })
-// })
 
-randBtn.addEventListener('click', ()=> {
+randBtn.addEventListener('click', ()=> {//how to randomize 5 categories being fetched?
     fetch("https://foodish-api.herokuapp.com/api/images/biryani")
     .then((response) => {
         console.log(response)
@@ -197,6 +184,96 @@ adviseBtn.addEventListener('click', ()=> {
     });
 })    
 /*-------------------------------- Functions --------------------------------*/
+function biryaniCat() {
+    fetch("https://foodish-api.herokuapp.com/api/images/biryani")
+    .then((response) => {
+        console.log(response)
+        return response.json()
+    })
+    .then((data) => {
+                let newImage = {}
+                newImage["cat"] = "biryani"
+                newImage["image"] = data.image
+                biryaniImg.push(newImage)
+                render();
+    })
+    .catch((err) => {
+      console.log(err)
+     });
+};
+
+function burgerCat() {
+    fetch("https://foodish-api.herokuapp.com/api/images/burger")
+    .then((response) => {
+        console.log(response)
+        return response.json()
+    })
+    .then((data) => {
+                let newImage = {}
+                newImage["cat"] = "burger"
+                newImage["image"] = data.image
+                burgerImg.push(newImage)
+                render();
+    })
+    .catch((err) => {
+      console.log(err)
+     });    
+};
+
+function dosaCat() {
+    fetch("https://foodish-api.herokuapp.com/api/images/dosa")
+    .then((response) => {
+        console.log(response)
+        return response.json()
+    })
+    .then((data) => {
+                let newImage = {}
+                newImage["cat"] = "dosa"
+                newImage["image"] = data.image
+                dosaImg.push(newImage)
+                render();
+    })
+    .catch((err) => {
+      console.log(err)
+     });     
+};
+
+function idlyCat() {
+    fetch("https://foodish-api.herokuapp.com/api/images/idly")
+    .then((response) => {
+        console.log(response)
+        return response.json()
+    })
+    .then((data) => {
+                let newImage = {}
+                newImage["cat"] = "idly"
+                newImage["image"] = data.image
+                idlyImg.push(newImage)
+                render();
+    })
+    .catch((err) => {
+      console.log(err)
+     });     
+};
+
+function pizzaCat() {
+    fetch("https://foodish-api.herokuapp.com/api/images/pizza")
+    .then((response) => {
+        console.log(response)
+        return response.json()
+    })
+    .then((data) => {
+                let newImage = {}
+                newImage["cat"] = "pizza"
+                newImage["image"] = data.image
+                pizzaImg.push(newImage)
+                render();
+    })
+    .catch((err) => {
+      console.log(err)
+     });     
+};
+
 function render() {
     container.innerHTML = ""
     categories.forEach((cat, idx) => {
@@ -218,3 +295,4 @@ function appendDiv(advice, artist) {
                         `
     container.appendChild(newDiv)
 }
+
