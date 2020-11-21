@@ -168,7 +168,7 @@ const slip = document.getElementById("adviceSlip")
 const getBiryani = async() => {
     fetch("https://foodish-api.herokuapp.com/api/images/biryani")
     .then((response) => {
-        console.log(response)
+        console.log(response.url)
         return response.json()
     })
     .then((data) => {
@@ -186,7 +186,7 @@ const getBiryani = async() => {
 const getBurger = async() => {
     fetch("https://foodish-api.herokuapp.com/api/images/burger")
     .then((response) => {
-        console.log(response)
+        console.log(response.url)
         return response.json()
     })
     .then((data) => {
@@ -204,7 +204,7 @@ const getBurger = async() => {
 const getDosa = async() => {
     fetch("https://foodish-api.herokuapp.com/api/images/dosa")
     .then((response) => {
-        console.log(response)
+        console.log(response.url)
         return response.json()
     })
     .then((data) => {
@@ -222,7 +222,7 @@ const getDosa = async() => {
 const getIdly = async() => {
     fetch("https://foodish-api.herokuapp.com/api/images/idly")
     .then((response) => {
-        console.log(response)
+        console.log(response.url)
         return response.json()
     })
     .then((data) => {
@@ -240,7 +240,7 @@ const getIdly = async() => {
 const getPizza = async() => {
     fetch("https://foodish-api.herokuapp.com/api/images/pizza")
     .then((response) => {
-        console.log(response)
+        console.log(response.url)
         return response.json()
     })
     .then((data) => {
@@ -293,36 +293,38 @@ adviseBtn.addEventListener('click', ()=> {
 })    
 /*-------------------------------- Functions --------------------------------*/
 //function for first API
-function appendImg(image, cat) {
-    let newContainer = document.createElement("div")
-    newContainer.innerHTML = `
-                                <div class="card mb-3" id="${cat.toLowerCase()}" style="max-width: 540px;">
-                                    <div class="row no-gutters">
-                                        <div class="col-md-4">
-                                            <img src="${image}" class="card-img" alt="randomizer-picks">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                    <h5 class="card-title">the Randomizer picks...</h5>
-                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                            `
-    container.appendChild(newContainer)
-}
+// function appendImg(image, cat) {
+//     let newContainer = document.createElement("div")
+//     newContainer.innerHTML = `
+//                                 <div class="card mb-3" id="${cat.toLowerCase()}" style="max-width: 540px;">
+//                                     <div class="row no-gutters">
+//                                         <div class="col-md-4">
+//                                             <img src="${image}" class="card-img" alt="randomizer-picks">
+//                                 </div>
+//                                 <div class="col-md-8">
+//                                     <div class="card-body">
+//                                     <h5 class="card-title">the Randomizer picks...</h5>
+//                                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+//                                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+//                                     </div>
+//                                 </div>
+//                                 </div>
+//                             </div>
+//                             `
+//     container.appendChild(newContainer)
+// }
 
 
-{/* <div class="card h-100" id="${cat.toLowerCase()}">
+
+
+/*{ <div class="card h-100" id="${cat.toLowerCase()}">
                             <div class="card-body">
                                 <blockquote class="blockquote mb-0">
                                      <img id="pick" class="getPick" src="${image}" alt="randomizer-picks">
                                      <footer class="blockquote-footer">${cat}</footer>
                                 </blockquote>
                             </div>
-                            </div>  */}
+                            </div>  }*/
 
 //function for second APi
 function appendDiv(advice, artist) {

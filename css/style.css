@@ -26,7 +26,7 @@ body {
     flex-flow: column wrap;
     justify-content: center;
     min-width: 320px;
-    --body-bg: #f7ecbd;
+    --body-bg: #FCA655;
     --header-bg: #FD5C53;
     --header-text-color: #FCBC55;
     --btn-bg-color: #FA8449;
@@ -35,11 +35,12 @@ body {
     --card-bg-color: #FD5C53;
     text-align: center;
     background-color: var(--body-bg);
-    --div-bg: #FCA655;
+    --div-bg: #FCBC55;
 }
 
     h1{
         background-color: var(--header-bg);
+        color: white;
         width: 100%;
         min-height: 50px;
         min-width: 320px;
@@ -54,8 +55,7 @@ body {
         min-width: 275px;
         min-height: 275px;
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        grid-template-rows: repeat(12, 1fr);
         font-size: 2rem;
         background-color: var(--div-bg);
         border-radius: 50%;
@@ -63,6 +63,7 @@ body {
         justify-content: space-evenly;
         margin: 30px auto;
         align-content: center;
+        border: solid white;
     }
 
     .carousel{
@@ -70,6 +71,26 @@ body {
         height: 7rem;
         width: 7rem;
         border-radius: 50%;
+    }
+
+    #cat1{
+        grid-row: 2fr;
+    }
+
+    #cat2{
+        grid-row: 4fr;
+    }
+
+    #cat3{
+        grid-row: 2fr;
+    }
+
+    #cat4{
+        grid-row: 2fr;
+    }
+
+    #cat5{
+        grid-row: 2fr;
     }
 
     #randomizer{
@@ -89,6 +110,7 @@ body {
         background-color: var(--div-bg);
         margin: 30px 0 30px 0;
         border-radius: 5px;
+        border: solid white;
     }
   
     #adviseHeader{
@@ -110,4 +132,5 @@ body {
         margin: auto;
         align-self: center;
         margin-bottom: 20px;
+        background-color: var(--body-bg);
     }
