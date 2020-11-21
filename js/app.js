@@ -74,7 +74,7 @@ const burgerImg = []
 const dosaImg = []
 const idlyImg = []
 const pizzaImg = []
-const allImages = []
+const randomImages = []
 const advices = []
 
 
@@ -255,43 +255,74 @@ const getPizza = async() => {
      });
 }
 
+// randBtn.addEventListener('click', async() => {
+//     try{
+//         const a = getBiryani();
+//         const b = getBurger();
+//         const c = getDosa();
+//         const d = getIdly();
+//         const e = getPizza();
+
+//         const randomize = await Promise.all([a, b, c, d, e])
+
+//         // throw 'broken!'
+        
+//         return randomize
+        
+
+//     } catch(err) {
+//         console.log(err)
+//         return `It's all gonna be just fine...`
+//         // throw `Get a burger!`
+//     }
+// });
+
 randBtn.addEventListener('click', async() => {
     try{
-        const a = getBiryani();
-        const b = getBurger();
-        const c = getDosa();
-        const d = getIdly();
-        const e = getPizza();
-
-        const randomize = await Promise.all([a, b, c, d, e])
-        // .then( responses => {
-        //     console.log(responses)
-        //     responses.forEach(response=>{
-        //         process( response.json() );
-        //     })
-        //     //response[0].json()
-        //     //response[1].json()
-        //     //response[2].json()
-        //     //response[3].json()
-        //     //response[4].json()
-        // })
-
-        // throw 'broken!'
-
-        return randomize
-
-        } catch(err) {
-            console.log(err)
-            return `It's all gonna be just fine...`
-            // throw `Get a burger!`
-        }
+        const a = fetch("https://foodish-api.herokuapp.com/api/images/biryani");
+        const b = fetch("https://foodish-api.herokuapp.com/api/images/burger");
+        const c = fetch("https://foodish-api.herokuapp.com/api/images/dosa");
+        const d = fetch("https://foodish-api.herokuapp.com/api/images/idly");
+        const e = fetch("https://foodish-api.herokuapp.com/api/images/pizza");
+        await Promise.all([a, b, c, d, e])
+        .then(async (results) => {
+            jsonResults = []
+            for (const result of results) {
+                jsonResults.push(await result.json())
+            }
+            return jsonResults
+        })
+        .then(data => {
+            console.log(data)
+            let newImage = {}
+                newImage["cat"] = "randomAPI"
+                newImage["image"] = data.array
+                randomImages.push(newImage)
+                render();
+        })
+    } catch(err) {
+        console.log(err)
+    }
 });
 
-
-
-// randBtn.addEventListener()
-//     .then(val => console.log({ val }))
-//     .catch(err => console.log({ err }));
+// const getRandomImg = async() => {
+//     fetch(jsonResults)
+//     .then((response) => {
+//         console.log(response.url)
+//         return response.json()
+//     })
+//     .then((data) => {
+//         let newImage = {}
+//         newImage["cat"] = "random"
+//         newImage["image"] = data.image
+//         randomImages.push(newImage)
+//         render();
+//     })
+//     .catch(err) 
+//         console.log(err)
+//         return `It's all gonna be just fine...`
+//         // throw `Get a burger!`
+// }
 
 adviseBtn.addEventListener('click', ()=> {
     fetch("https://api.adviceslip.com/advice")
@@ -341,13 +372,14 @@ adviseBtn.addEventListener('click', ()=> {
 //         document.getElementById('containerDiv').appendChild(img);
 //     });       
 // }
-// function appendImg(image, cat) {
-//     let newContainer = document.getElementById("containerDiv")
-//     newContainer.innerHTML = `
-//                                 <div id="${cat.toLowerCase()}" class="flex-container"><img src="${Object.values(image)[1]}" onerror="src='https://thumbs.dreamstime.com/z/funny-dog-wearing-wig-female-clothes-white-background-48441429.jpg'" alt="rand-image." width="350px" height="300px"></div>
-//                             `
-//     container.appendChild(newContainer)
-// }
+
+function appendImg(randomImages, cat) {
+    let newContainer = document.createElement("div")
+    newContainer.innerHTML = `
+                                <div id="${cat.toLowerCase()}" class="flex-container"><img src="${Object.values(randomImages)}" onerror="src='https://thumbs.dreamstime.com/z/funny-dog-wearing-wig-female-clothes-white-background-48441429.jpg'" alt="rand-image." width="350px" height="300px"></div>
+                            `
+    container.appendChild(newContainer)
+}
 
 
 // .then((dog) => { // then we do the following to the promise, now defined as "dog" ...
@@ -392,7 +424,7 @@ function appendDiv(advice, artist) {
 
 function render() {
     container.innerHTML = ""
-    allImages.forEach((image, idx) => {
+    randomImages.forEach((image, idx) => {
         appendImg(image["image"], image["cat"], idx)
     });
     slip.innerHTML = ""
