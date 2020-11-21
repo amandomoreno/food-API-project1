@@ -294,8 +294,8 @@ adviseBtn.addEventListener('click', ()=> {
 /*-------------------------------- Functions --------------------------------*/
 //function for first API
 function appendImg(image, cat) {
-    let newDiv = document.createElement("div")
-    newDiv.innerHTML = `
+    let newContainer = document.createElement("div")
+    newContainer.innerHTML = `
                         <div class="card h-100" id="${cat.toLowerCase()}">
                             <div class="card-body">
                                 <blockquote class="blockquote mb-0">
@@ -305,7 +305,7 @@ function appendImg(image, cat) {
                             </div>
                             </div>    
                             `
-    container.appendChild(newDiv)
+    container.appendChild(newContainer)
 }
 
 //function for second APi
@@ -334,7 +334,7 @@ function appendDiv(advice, artist) {
 function render() {
     container.innerHTML = ""
     allImages.forEach((image, idx) => {
-        appendDiv(image["image"], image["cat"], idx)
+        appendImg(image["image"], image["cat"], idx)
     });
     slip.innerHTML = ""
     advices.forEach((advice, idx) => {
