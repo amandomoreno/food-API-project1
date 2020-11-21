@@ -80,28 +80,33 @@ body {
         justify-self: center;
     }
 
-    aside{
+    #advise{
         display: flex;
         flex-wrap: wrap;
+        flex-direction: column;
         justify-content: center;
+        align-self: center;
         width: 75%;
+        background-color: rgb(212, 28, 28);
+        margin: 30px 0 30px 0;
+        border-radius: 5px;
     }
   
-    #reviews{
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        width: 75%;
-        height: 400px;
-        margin-top: 15px;
+    #adviseHeader{
+        margin: 15px 0 15px 0;
+    }
+
+    #adviceButton{
+        margin: 15px 0 15px 0;
+        width: 75px;
+        height: 50px;
+        border: none;
+        border-radius: 3px;
         align-self: center;
-        background-color: black;
     }
 
-    .reviewVideos {
-        justify-content: center;
-    }
-
-    #foodFacts {
-        color: white;
+    .card{
+        width: 200px;
+        height: 150px;
+        place-content: center;
     }
