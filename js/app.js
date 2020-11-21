@@ -74,7 +74,7 @@ const burgerImg = []
 const dosaImg = []
 const idlyImg = []
 const pizzaImg = []
-const allImages = biryaniImg + burgerImg + dosaImg + idlyImg + pizzaImg
+const allImages = []
 const advices = []
 
 
@@ -262,18 +262,36 @@ randBtn.addEventListener('click', async() => {
         const c = getDosa();
         const d = getIdly();
         const e = getPizza();
-        const randomize = await Promise.all([a, b, c, d, e]);
+
+        const randomize = await Promise.all([a, b, c, d, e])
+        // .then( responses => {
+        //     console.log(responses)
+        //     responses.forEach(response=>{
+        //         process( response.json() );
+        //     })
+        //     //response[0].json()
+        //     //response[1].json()
+        //     //response[2].json()
+        //     //response[3].json()
+        //     //response[4].json()
+        // })
 
         // throw 'broken!'
 
-        return randomize;
+        return randomize
 
-    } catch(err) {
-        console.log(err)
-        return `It's all gonna be just fine...`
-        // throw `Get a burger!`
-    }
+        } catch(err) {
+            console.log(err)
+            return `It's all gonna be just fine...`
+            // throw `Get a burger!`
+        }
 });
+
+
+
+// randBtn.addEventListener()
+//     .then(val => console.log({ val }))
+//     .catch(err => console.log({ err }));
 
 adviseBtn.addEventListener('click', ()=> {
     fetch("https://api.adviceslip.com/advice")
@@ -315,13 +333,21 @@ adviseBtn.addEventListener('click', ()=> {
 // }
 
 // function for first API
-function appendImg(image, cat) {
-    let newContainer = document.getElementById("containerDiv")
-    newContainer.innerHTML = `
-                                <div id="${cat.toLowerCase()}" class="flex-container"><img src="${Object.values(dog)[1]}" onerror="src='https://thumbs.dreamstime.com/z/funny-dog-wearing-wig-female-clothes-white-background-48441429.jpg'" alt="rand-image." width="350px" height="300px"></div>
-                            `
-    container.appendChild(newContainer)
-}
+
+// let process = (prom) =>{
+//     prom.then(data=>{
+//         let img = document.createElement('img');
+//         img.style.background = data.image;
+//         document.getElementById('containerDiv').appendChild(img);
+//     });       
+// }
+// function appendImg(image, cat) {
+//     let newContainer = document.getElementById("containerDiv")
+//     newContainer.innerHTML = `
+//                                 <div id="${cat.toLowerCase()}" class="flex-container"><img src="${Object.values(image)[1]}" onerror="src='https://thumbs.dreamstime.com/z/funny-dog-wearing-wig-female-clothes-white-background-48441429.jpg'" alt="rand-image." width="350px" height="300px"></div>
+//                             `
+//     container.appendChild(newContainer)
+// }
 
 
 // .then((dog) => { // then we do the following to the promise, now defined as "dog" ...
