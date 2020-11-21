@@ -88,7 +88,84 @@ const slip = document.getElementById("adviceSlip")
 
 /*----------------------------- Event Listeners -----------------------------*/
 
-randBtn.addEventListener('click', ()=> {
+// randBtn.addEventListener('click', ()=> {
+//     fetch("https://foodish-api.herokuapp.com/api/images/biryani")
+//     .then((response) => {
+//         console.log(response)
+//         return response.json()
+//     })
+//     .then((data) => {
+//                 let newImage = {}
+//                 newImage["cat"] = "biryani"
+//                 newImage["image"] = data.image
+//                 biryaniImg.push(newImage)
+//                 render();
+//     })
+//     .catch((err) => {
+//       console.log(err)
+//      });
+//     fetch("https://foodish-api.herokuapp.com/api/images/burger")
+//     .then((response) => {
+//         console.log(response)
+//         return response.json()
+//     })
+//     .then((data) => {
+//                 let newImage = {}
+//                 newImage["cat"] = "burger"
+//                 newImage["image"] = data.image
+//                 burgerImg.push(newImage)
+//                 render();
+//     })
+//     .catch((err) => {
+//       console.log(err)
+//      });
+//     fetch("https://foodish-api.herokuapp.com/api/images/dosa")
+//     .then((response) => {
+//         console.log(response)
+//         return response.json()
+//     })
+//     .then((data) => {
+//                 let newImage = {}
+//                 newImage["cat"] = "dosa"
+//                 newImage["image"] = data.image
+//                 dosaImg.push(newImage)
+//                 render();
+//     })
+//     .catch((err) => {
+//       console.log(err)
+//      });
+//     fetch("https://foodish-api.herokuapp.com/api/images/idly")
+//     .then((response) => {
+//         console.log(response)
+//         return response.json()
+//     })
+//     .then((data) => {
+//                 let newImage = {}
+//                 newImage["cat"] = "idly"
+//                 newImage["image"] = data.image
+//                 idlyImg.push(newImage)
+//                 render();
+//     })
+//     .catch((err) => {
+//       console.log(err)
+//      });
+//     fetch("https://foodish-api.herokuapp.com/api/images/pizza")
+//     .then((response) => {
+//         console.log(response)
+//         return response.json()
+//     })
+//     .then((data) => {
+//                 let newImage = {}
+//                 newImage["cat"] = "pizza"
+//                 newImage["image"] = data.url
+//                 pizzaImg.push(newImage)
+//                 render();
+//     })
+//     .catch((err) => {
+//       console.log(err)
+//      });
+// })
+const getBiryani = async() => {
     fetch("https://foodish-api.herokuapp.com/api/images/biryani")
     .then((response) => {
         console.log(response)
@@ -104,6 +181,9 @@ randBtn.addEventListener('click', ()=> {
     .catch((err) => {
       console.log(err)
      });
+}
+
+const getBurger = async() => {
     fetch("https://foodish-api.herokuapp.com/api/images/burger")
     .then((response) => {
         console.log(response)
@@ -119,6 +199,9 @@ randBtn.addEventListener('click', ()=> {
     .catch((err) => {
       console.log(err)
      });
+}
+
+const getDosa = async() => {
     fetch("https://foodish-api.herokuapp.com/api/images/dosa")
     .then((response) => {
         console.log(response)
@@ -134,6 +217,9 @@ randBtn.addEventListener('click', ()=> {
     .catch((err) => {
       console.log(err)
      });
+}
+
+const getIdly = async() => {
     fetch("https://foodish-api.herokuapp.com/api/images/idly")
     .then((response) => {
         console.log(response)
@@ -143,12 +229,15 @@ randBtn.addEventListener('click', ()=> {
                 let newImage = {}
                 newImage["cat"] = "idly"
                 newImage["image"] = data.image
-                idlyImg.push(newImage)
+                burgerImg.push(newImage)
                 render();
     })
     .catch((err) => {
       console.log(err)
      });
+}
+
+const getPizza = async() => {
     fetch("https://foodish-api.herokuapp.com/api/images/pizza")
     .then((response) => {
         console.log(response)
@@ -157,14 +246,34 @@ randBtn.addEventListener('click', ()=> {
     .then((data) => {
                 let newImage = {}
                 newImage["cat"] = "pizza"
-                newImage["image"] = data.url
+                newImage["image"] = data.image
                 pizzaImg.push(newImage)
                 render();
     })
     .catch((err) => {
       console.log(err)
      });
-})
+}
+
+randBtn.addEventListener('click', async() => {
+    try{
+        const a = getBiryani();
+        const b = getBurger();
+        const c = getDosa();
+        const d = getIdly();
+        const e = getPizza();
+        const randomize = await Promise.all([a, b, c, d, e]);
+
+        // throw 'broken!'
+
+        return randomize;
+
+    } catch(err) {
+        console.log(err)
+        return `It's all gonna be just fine...`
+        // throw `Get a burger!`
+    }
+});
 
 adviseBtn.addEventListener('click', ()=> {
     fetch("https://api.adviceslip.com/advice")
@@ -183,18 +292,24 @@ adviseBtn.addEventListener('click', ()=> {
     });
 })    
 /*-------------------------------- Functions --------------------------------*/
+//function for first API
 function appendImg(image, cat) {
-    let newContainer = document.createElement("img")
-    newContainer.innerHTML = `
-                        <div class="image h-100" id="${cat.toLowerCase()}">
-                        <img id="pick" class="getPick" src="${image}" alt="randomizer-picks">
+    let newDiv = document.createElement("div")
+    newDiv.innerHTML = `
+                        <div class="card h-100" id="${cat.toLowerCase()}">
+                            <div class="card-body">
+                                <blockquote class="blockquote mb-0">
+                                     <img id="pick" class="getPick" src="${image}" alt="randomizer-picks">
+                                     <footer class="blockquote-footer">${cat}</footer>
+                                </blockquote>
+                            </div>
                             </div>    
-                        `
+                            `
     container.appendChild(newDiv)
 }
 
 //function for second APi
-function appendDiv(advice, artist, idx) {
+function appendDiv(advice, artist) {
     let newDiv = document.createElement("div")
     newDiv.innerHTML = `
                         <div class="card h-100" id="${artist.toLowerCase()}">
@@ -217,12 +332,14 @@ function appendDiv(advice, artist, idx) {
 // };
 
 function render() {
+    container.innerHTML = ""
+    allImages.forEach((image, idx) => {
+        appendDiv(image["image"], image["cat"], idx)
+    });
     slip.innerHTML = ""
     advices.forEach((advice, idx) => {
         appendDiv(advice["advise"], advice["artist"], idx)
     });
-    container.innerHTML = ""
-    allImages.forEach((image, idx))
 }
 
 // function deleteAdvise(idx){
