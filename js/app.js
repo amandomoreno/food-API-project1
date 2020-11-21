@@ -69,12 +69,12 @@
 
 
 /*---------------------------- Variables (state) ----------------------------*/
-const allImages = []
 const biryaniImg = []
 const burgerImg = []
 const dosaImg = []
 const idlyImg = []
 const pizzaImg = []
+const allImages = biryaniImg + burgerImg + dosaImg + idlyImg + pizzaImg
 const advices = []
 
 
@@ -314,6 +314,21 @@ adviseBtn.addEventListener('click', ()=> {
 //     container.appendChild(newContainer)
 // }
 
+// function for first API
+function appendImg(image, cat) {
+    let newContainer = document.getElementById("containerDiv")
+    newContainer.innerHTML = `
+                                <div id="${cat.toLowerCase()}" class="flex-container"><img src="${Object.values(dog)[1]}" onerror="src='https://thumbs.dreamstime.com/z/funny-dog-wearing-wig-female-clothes-white-background-48441429.jpg'" alt="rand-image." width="350px" height="300px"></div>
+                            `
+    container.appendChild(newContainer)
+}
+
+
+// .then((dog) => { // then we do the following to the promise, now defined as "dog" ...
+// // console.log(Object.values(dog)[1]); // turn this on for testing
+// let newDog = document.getElementById('randomDogAPIImage'); // create "newDog" and have it set to ID randomDogAPIImage ...
+// newDog.innerHTML = `<div id="dogImageHolder" class="flex-container"><img src="${Object.values(dog)[1]}" onerror="src='https://thumbs.dreamstime.com/z/funny-dog-wearing-wig-female-clothes-white-background-48441429.jpg'" alt="dog." width="350px" height="300px"></div>`; // In "newDog", we now update it with a new div, which we ID as "dogImageHolder" and link it to the value (url) of the API. Also added a default stock photo image to replace any broken links, set the alt text to "dog." and gave it a specific widthe and height.
+// })
 
 
 
