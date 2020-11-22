@@ -379,7 +379,7 @@ adviseBtn.addEventListener('click', ()=> {
 function appendImg(image, cat) {
     let newContainer = document.createElement("div")
     newContainer.innerHTML = `
-                                <div id="${cat.toLowerCase()}" class="flex-container"><img src="${Object.values(image)}" onerror="src='https://thumbs.dreamstime.com/z/funny-dog-wearing-wig-female-clothes-white-background-48441429.jpg'" alt="rand-image." width="350px" height="300px"></div>
+                                <div id="${cat.toLowerCase()}" class="flex-container"><img src="${image}" onerror="src='https://thumbs.dreamstime.com/z/funny-dog-wearing-wig-female-clothes-white-background-48441429.jpg'" alt="rand-image." width="350px" height="300px"></div>
                             `
     container.appendChild(newContainer)
 }
