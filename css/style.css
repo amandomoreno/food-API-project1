@@ -3,6 +3,13 @@ laptop: 1024px;
 tablet: 768px;
 phone: 414px; */
 
+/* colors:
+#FCBC55
+#FCA655
+#FA8449
+#FD7358
+#FD5C53 */
+
 html {
     box-sizing: border-box
 }
@@ -133,6 +140,7 @@ body {
 
     #newDiv>p{
         font-size: 2rem;
+        color: white;
     }
 
     #newDiv>#containerDiv>div>#randomapi>img{
@@ -159,6 +167,7 @@ body {
   
     #adviseHeader{
         margin: 15px 0 15px 0;
+        color: white;
     }
 
     #adviceButton{
@@ -256,7 +265,7 @@ body {
             border-radius: 50%;
             margin: 30px auto;
             align-content: center;
-            border: solid white;
+            border: solid #FA8449;
             grid-column: 2 / 3;
             grid-row: 2 / 5;
             justify-self: center;
@@ -321,11 +330,13 @@ body {
             grid-row: 5 / 6;
             justify-self: center;
             align-self: flex-start;
-            transform: translate(0, -15%);
+            transform: translate(0, -45%);
+            border: solid #FA8449;
         }
 
         #newDiv>p{
             font-size: 2rem;
+            color: black;
         }
 
         #newDiv>#containerDiv>div>#randomapi>img{
@@ -335,6 +346,7 @@ body {
             align-self: center;
             margin: auto;
             border-radius: 5px;
+            border: solid #FA8449;
         }
 
         #advise{
@@ -345,16 +357,17 @@ body {
             background-color: var(--div-bg);
             margin: 30px 0 30px 0;
             border-radius: 5px;
-            border: solid white;
+            border: solid #FA8449;
             grid-column: 3 / 5;
             grid-row: 2 / 5;
             justify-self: center;
             align-self: center;
-            transform: translate(0, -15%);
+            transform: translate(15%, -30%);
         }
     
         #adviseHeader{
             margin: 15px 0 15px 0;
+            color: black;
         }
 
         #adviceButton{
@@ -373,5 +386,6 @@ body {
             align-self: center;
             margin-bottom: 20px;
             background-color: var(--body-bg);
+            border: solid #FA8449;
         }
 }
