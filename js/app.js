@@ -165,95 +165,95 @@ const slip = document.getElementById("adviceSlip")
 //       console.log(err)
 //      });
 // })
-const getBiryani = async() => {
-    fetch("https://foodish-api.herokuapp.com/api/images/biryani")
-    .then((response) => {
-        console.log(response.url)
-        return response.json()
-    })
-    .then((data) => {
-                let newImage = {}
-                newImage["cat"] = "biryani"
-                newImage["image"] = data.image
-                biryaniImg.push(newImage)
-                render();
-    })
-    .catch((err) => {
-      console.log(err)
-     });
-}
+// const getBiryani = async() => {
+//     fetch("https://foodish-api.herokuapp.com/api/images/biryani")
+//     .then((response) => {
+//         console.log(response.url)
+//         return response.json()
+//     })
+//     .then((data) => {
+//                 let newImage = {}
+//                 newImage["cat"] = "biryani"
+//                 newImage["image"] = data.image
+//                 biryaniImg.push(newImage)
+//                 render();
+//     })
+//     .catch((err) => {
+//       console.log(err)
+//      });
+// }
 
-const getBurger = async() => {
-    fetch("https://foodish-api.herokuapp.com/api/images/burger")
-    .then((response) => {
-        console.log(response.url)
-        return response.json()
-    })
-    .then((data) => {
-                let newImage = {}
-                newImage["cat"] = "burger"
-                newImage["image"] = data.image
-                burgerImg.push(newImage)
-                render();
-    })
-    .catch((err) => {
-      console.log(err)
-     });
-}
+// const getBurger = async() => {
+//     fetch("https://foodish-api.herokuapp.com/api/images/burger")
+//     .then((response) => {
+//         console.log(response.url)
+//         return response.json()
+//     })
+//     .then((data) => {
+//                 let newImage = {}
+//                 newImage["cat"] = "burger"
+//                 newImage["image"] = data.image
+//                 burgerImg.push(newImage)
+//                 render();
+//     })
+//     .catch((err) => {
+//       console.log(err)
+//      });
+// }
 
-const getDosa = async() => {
-    fetch("https://foodish-api.herokuapp.com/api/images/dosa")
-    .then((response) => {
-        console.log(response.url)
-        return response.json()
-    })
-    .then((data) => {
-                let newImage = {}
-                newImage["cat"] = "dosa"
-                newImage["image"] = data.image
-                dosaImg.push(newImage)
-                render();
-    })
-    .catch((err) => {
-      console.log(err)
-     });
-}
+// const getDosa = async() => {
+//     fetch("https://foodish-api.herokuapp.com/api/images/dosa")
+//     .then((response) => {
+//         console.log(response.url)
+//         return response.json()
+//     })
+//     .then((data) => {
+//                 let newImage = {}
+//                 newImage["cat"] = "dosa"
+//                 newImage["image"] = data.image
+//                 dosaImg.push(newImage)
+//                 render();
+//     })
+//     .catch((err) => {
+//       console.log(err)
+//      });
+// }
 
-const getIdly = async() => {
-    fetch("https://foodish-api.herokuapp.com/api/images/idly")
-    .then((response) => {
-        console.log(response.url)
-        return response.json()
-    })
-    .then((data) => {
-                let newImage = {}
-                newImage["cat"] = "idly"
-                newImage["image"] = data.image
-                burgerImg.push(newImage)
-                render();
-    })
-    .catch((err) => {
-      console.log(err)
-     });
-}
+// const getIdly = async() => {
+//     fetch("https://foodish-api.herokuapp.com/api/images/idly")
+//     .then((response) => {
+//         console.log(response.url)
+//         return response.json()
+//     })
+//     .then((data) => {
+//                 let newImage = {}
+//                 newImage["cat"] = "idly"
+//                 newImage["image"] = data.image
+//                 burgerImg.push(newImage)
+//                 render();
+//     })
+//     .catch((err) => {
+//       console.log(err)
+//      });
+// }
 
-const getPizza = async() => {
-    fetch("https://foodish-api.herokuapp.com/api/images/pizza")
-    .then((response) => {
-        console.log(response.url)
-        return response.json()
-    })
-    .then((data) => {
-                let newImage = {}
-                newImage["cat"] = "pizza"
-                newImage["image"] = data.image
-                pizzaImg.push(newImage)
-                render();
-    })
-    .catch((err) => {
-      console.log(err)
-     });
-}
+// const getPizza = async() => {
+//     fetch("https://foodish-api.herokuapp.com/api/images/pizza")
+//     .then((response) => {
+//         console.log(response.url)
+//         return response.json()
+//     })
+//     .then((data) => {
+//                 let newImage = {}
+//                 newImage["cat"] = "pizza"
+//                 newImage["image"] = data.image
+//                 pizzaImg.push(newImage)
+//                 render();
+//     })
+//     .catch((err) => {
+//       console.log(err)
+//      });
+// }
 
 // randBtn.addEventListener('click', async() => {
 //     try{
@@ -290,15 +290,16 @@ randBtn.addEventListener('click', async() => {
             for (const result of results) {
                 jsonResults.push(await result.json())
             }
-            return jsonResults
+            return jsonResults  
         })
         .then(data => {
             console.log(data)
-            let newImage = {}
-                newImage["cat"] = "randomAPI"
-                newImage["image"] = data.array
-                randomImages.push(newImage)
-                render();
+            // let newImage = {}
+            //     newImage["cat"] = "randomAPI"
+            //     newImage["image"] = data.image
+            //     randomImages.push(newImage)
+            //     render();
+            //     console.log(newImage)
         })
     } catch(err) {
         console.log(err)
@@ -373,10 +374,10 @@ adviseBtn.addEventListener('click', ()=> {
 //     });       
 // }
 
-function appendImg(randomImages, cat) {
+function appendImg(image, cat) {
     let newContainer = document.createElement("div")
     newContainer.innerHTML = `
-                                <div id="${cat.toLowerCase()}" class="flex-container"><img src="${Object.values(randomImages)}" onerror="src='https://thumbs.dreamstime.com/z/funny-dog-wearing-wig-female-clothes-white-background-48441429.jpg'" alt="rand-image." width="350px" height="300px"></div>
+                                <div id="${cat.toLowerCase()}" class="flex-container"><img src="${Object.values(image)}" onerror="src='https://thumbs.dreamstime.com/z/funny-dog-wearing-wig-female-clothes-white-background-48441429.jpg'" alt="rand-image." width="350px" height="300px"></div>
                             `
     container.appendChild(newContainer)
 }
