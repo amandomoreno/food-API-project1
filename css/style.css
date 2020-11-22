@@ -107,11 +107,13 @@ body {
     }
 
     #newDiv{
-        width: 100%;
+        width: 75%;
         height: 15rem;
         justify-self: center;
         align-self: center;
         margin: auto;
+        background-color: var(--header-bg);
+        border-radius: 5px;
     }
 
     #newDiv>p{
