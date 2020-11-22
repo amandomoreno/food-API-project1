@@ -49,11 +49,13 @@ body {
         color: white;
         width: 100%;
         min-height: 50px;
-        width: 100%;
         font-size: 3rem;
-        margin: auto;
+        margin-bottom: 5px;
         padding: 10px;
+        border-radius: 0 0 5px 5px;
     }
+
+    
 
     #roulette{
         width: 375px;
@@ -213,10 +215,11 @@ body {
         Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
         margin: 0;
         display: grid;
-        grid-template-rows: 1fr auto auto auto;
+        grid-template: repeat(5, 1fr) / repeat(5, 1fr);
         /* flex-flow: column wrap; */
         justify-content: center;
         width: 100%;
+        height: 100vh;
         --body-bg: #FCA655;
         --header-bg: #FD5C53;
         --header-text-color: #FCBC55;
@@ -232,32 +235,39 @@ body {
         h1{
             background-color: var(--header-bg);
             color: black;
-            width: 7rem;
-            min-height: 100px;
+            height: 20px;
             width: 100%;
             font-size: 3rem;
             padding: 10px;
+            grid-column: 1 / 6;
+            grid-row: 1 / 2;
+            justify-self: flex-start;
+            align-self: flex-start;
+            margin-bottom: 3rem;
         }
 
         #roulette{
             width: 375px;
-            min-height: 375px;
+            height: 375px;
             display: grid;
             grid-template: repeat(4, 1fr) / repeat(5, 1fr);
             font-size: 2rem;
             background-color: var(--div-bg);
             border-radius: 50%;
-            align-self: center;
-            justify-content: space-evenly;
             margin: 30px auto;
             align-content: center;
             border: solid white;
+            grid-column: 2 / 3;
+            grid-row: 2 / 5;
+            justify-self: center;
+            align-self: flex-start;
+            transform: translate(0, -20%);
         }
 
         .carousel{
             background-color: white;
-            height: 7rem;
-            width: 7rem;
+            height: 10rem;
+            width: 10rem;
             border-radius: 50%;
         }
 
@@ -299,11 +309,14 @@ body {
         #newDiv{
             width: 75%;
             height: 15rem;
-            justify-self: center;
-            align-self: center;
             margin: auto;
             background-color: var(--header-bg);
             border-radius: 5px;
+            grid-column: 2 / 3;
+            grid-row: 5 / 6;
+            justify-self: center;
+            align-self: flex-start;
+            transform: translate(0, -15%);
         }
 
         #newDiv>p{
@@ -323,13 +336,16 @@ body {
             display: flex;
             flex-wrap: wrap;
             flex-direction: column;
-            justify-self: center;
-            align-self: center;
             width: 75%;
             background-color: var(--div-bg);
             margin: 30px 0 30px 0;
             border-radius: 5px;
             border: solid white;
+            grid-column: 3 / 5;
+            grid-row: 2 / 5;
+            justify-self: center;
+            align-self: center;
+            transform: translate(0, -15%);
         }
     
         #adviseHeader{
