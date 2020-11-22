@@ -290,16 +290,18 @@ randBtn.addEventListener('click', async() => {
             for (const result of results) {
                 jsonResults.push(await result.json())
             }
-            return jsonResults  
+            return jsonResults 
         })
         .then(data => {
-            console.log(data)
-            // let newImage = {}
-            //     newImage["cat"] = "randomAPI"
-            //     newImage["image"] = data.image
-            //     randomImages.push(newImage)
-            //     render();
-            //     console.log(newImage)
+            // console.log(data.filter(d => d.image.length > 50).image)//.filter(d => d.image.length > 50)
+            // let d = data[Math.floor(Math.random() * data.length)];
+            // console.log('jhgjjhj: ' + d.image);
+            let newImage = data[Math.floor(Math.random() * data.length)]
+            newImage["cat"] = "randomAPI"
+            newImage["image"] = newImage.image
+            randomImages.push(newImage)
+            render();
+            console.log(newImage.image)
         })
     } catch(err) {
         console.log(err)
