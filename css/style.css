@@ -1,3 +1,8 @@
+/* desktop: 1200px;
+laptop: 1024px;
+tablet: 768px;
+phone: 414px; */
+
 html {
     box-sizing: border-box
 }
@@ -22,10 +27,11 @@ body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
       Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     margin: 0;
-    display: flex;
-    flex-flow: column wrap;
+    display: grid;
+    grid-template-rows: 1fr auto auto auto;
+    /* flex-flow: column wrap; */
     justify-content: center;
-    min-width: 320px;
+    width: 100%;
     --body-bg: #FCA655;
     --header-bg: #FD5C53;
     --header-text-color: #FCBC55;
@@ -43,7 +49,7 @@ body {
         color: white;
         width: 100%;
         min-height: 50px;
-        min-width: 320px;
+        width: 100%;
         font-size: 3rem;
         margin: auto;
         padding: 10px;
@@ -59,7 +65,7 @@ body {
         font-size: 2rem;
         background-color: var(--div-bg);
         border-radius: 50%;
-        justify-self: center;
+        align-self: center;
         justify-content: space-evenly;
         margin: 30px auto;
         align-content: center;
@@ -100,6 +106,23 @@ body {
         justify-self: center;
     }
 
+    #newDiv{
+        width: 100%;
+        height: 20rem;
+        justify-self: center;
+        align-self: center;
+        margin: auto;
+    }
+
+    #newDiv>#containerDiv>div>#randomapi>img{
+        width: 15rem;
+        height: 10rem;
+        justify-self: center;
+        align-self: center;
+        margin: auto;
+        border-radius: 5px;
+    }
+
     #advise{
         display: flex;
         flex-wrap: wrap;
@@ -134,3 +157,94 @@ body {
         margin-bottom: 20px;
         background-color: var(--body-bg);
     }
+
+    /* @media only screen and (min-width: 320px){
+        #flex-container{
+            display: grid;
+            text-align: left;
+            width: 550px;
+            margin: 0;
+            grid-template-columns: 40% 60%;
+            grid-template-rows: auto auto auto auto;
+            grid-template-areas: 
+            "status name"
+            "image occupation"
+            "image brand-statement"
+            "contact offer";
+        }
+
+        h4{
+            text-align: left;
+            justify-items: start;
+            padding: 10px 0 0 20px;
+            width: 100%;
+        }
+
+        #flex-container>header {
+            height: 175px;
+            justify-content: stretch;
+            grid-area: image;
+        }
+
+        img{
+            margin: 0 auto;
+            height: 125px;
+        }
+
+        .side {
+            background-color: lightgrey;
+        }
+
+        #flex-container>h1 {
+            text-align: left;
+            font-size: 2.5rem;
+            font-weight: 500;
+            margin: 0;
+            padding: 20px 0 10px 20px;
+        }
+
+        main{
+            height: 50px;
+            text-align: left;
+            padding: 0 0 0 20px;
+            background-color: lightgrey;
+        }
+
+        #description{
+            display: flex;
+            margin: 0;
+            padding: 15px;
+        }
+
+        #description>p{
+            font-size: 1.5rem;
+            margin: 0;
+            padding: 30px 10px 30px 10px;
+            text-align: left;
+        }
+
+        #pricing {
+            grid-area: offer;
+            padding: 10px 0 0 0;
+            width: 100%;
+            height: 50px;
+            background-color: lightgrey;
+        }
+
+        #pricing>h3 {
+            text-align: left;
+            margin: 0 0 0 20px;
+        }
+
+        #pricing>p {
+            text-align: left;
+            margin: 0 0 20px 20px;
+        }
+
+        footer{
+            grid-area: contact;
+            height: 50px;
+            margin: 0;
+            justify-self: end;
+        }
+    } */
