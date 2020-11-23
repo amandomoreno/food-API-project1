@@ -68,11 +68,6 @@
 
 
 /*---------------------------- Variables (state) ----------------------------*/
-const biryaniImg = []
-const burgerImg = []
-const dosaImg = []
-const idlyImg = []
-const pizzaImg = []
 const randomImages = []
 const advices = []
 /*------------------------ Cached Element References ------------------------*/
