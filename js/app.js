@@ -7,7 +7,7 @@
 
 //To reset, just click on the random generator button again
 
-//Person can hover to the right of the page and check out food reviews
+//Person can hover to the right of the page and get advice
 
 
 
@@ -34,18 +34,18 @@
 
 // 2) Define the required variables:
     //Random images being generated.
-    //Food review videos generated.
+    //Advise generated.
 
 // 3) Define the required cached elements:
     //Button to generate random food images.
     //Carousel div
     //card div
     //body
-    //video divs
+    //advise divs
 
 // 4) Upon loading, the product should:
-    //Initialize the random images being generated
-    //Initialize the food review videos
+    //Display the category images and a button
+    //Display the advice secction
 
 // 5) Person click events:
     //add event listener to random generator button

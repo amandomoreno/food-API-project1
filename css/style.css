@@ -10,19 +10,6 @@ phone: 414px; */
 #FD7358
 #FD5C53 */
 
-html {
-    box-sizing: border-box
-}
-
-/* The Universal Selector */
-*, /* All elements*/
-*::before, /* All ::before pseudo-elements */
-*::after { /* All ::after pseudo-elements */
-  /* height & width will now include border & padding by default
-     but can be over-ridden as needed */
-  box-sizing: inherit;
-}
-
 /* resets font size to be 62.5% of the user preference - 
    in most browser configurations this will be 10px */
 :root {
@@ -205,19 +192,6 @@ body {
 
     
 @media only screen and (min-width: 1024px){
-    html {
-         box-sizing: border-box
-    }
-
-    /* The Universal Selector */
-    *, /* All elements*/
-    *::before, /* All ::before pseudo-elements */
-    *::after { /* All ::after pseudo-elements */
-    /* height & width will now include border & padding by default
-        but can be over-ridden as needed */
-    box-sizing: inherit;
-    }
-
     /* resets font size to be 62.5% of the user preference - 
     in most browser configurations this will be 10px */
     :root {
