@@ -29,5 +29,7 @@ Responsive design rocks!
 #### Technology: HTML, CSS, JavaScript
 
 #### Icebox:
-
-I would like to add a category description from the image being rendered and create an empty array to store the advise, while rendering a new advise in it's place.
+- [ ] category description from the image being rendered
+- [ ] rendering a new images in it's place, while removing old images
+- [ ] rendering a new advise in it's place, while removing old advise
+- [ ] improved responsive deisgn
