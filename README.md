@@ -18,12 +18,13 @@ Using Postman to GET data from APIs:
 
 ### Here's the final result. Enjoy!
 
+Responsive design rocks!
 ![Working App](https://i.imgur.com/aypVH83.png) 
 ![Function](https://i.imgur.com/GaZenpY.png) 
 ![Mobile App](https://i.imgur.com/8PO4R1P.png) 
 ![Function](https://i.imgur.com/PK4ysJ2.png) 
 
-### Deploy the app: 
+### Deploy the app: [Visit Foodies Roulette](http://tightfisted-bird.surge.sh/)
 
 #### Technology: HTML, CSS, JavaScript
 
