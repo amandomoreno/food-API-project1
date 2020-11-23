@@ -22,7 +22,7 @@ Responsive design rocks!
 ![Mobile App](https://i.imgur.com/8PO4R1P.png) 
 ![Function](https://i.imgur.com/PK4ysJ2.png) 
 
-### Deploy the app: [Visit Foodies Roulette](http://tightfisted-bird.surge.sh/)
+### Get Started: [Visit Foodies Roulette](http://tightfisted-bird.surge.sh/)
 
 ### Technology: HTML, CSS, JavaScript
 
