@@ -31,7 +31,6 @@
 
 //Javascript stuff
 // 1) Define the required constants:
-    ////Color scheme(maybe)
 
 // 2) Define the required variables:
     //Random images being generated.
@@ -76,208 +75,14 @@ const idlyImg = []
 const pizzaImg = []
 const randomImages = []
 const advices = []
-
-
 /*------------------------ Cached Element References ------------------------*/
 const randBtn = document.getElementById('randomizer')
 const adviseBtn = document.getElementById('adviceButton');
 const container = document.getElementById("containerDiv")
 const body = document.getElementById('body')
 const slip = document.getElementById("adviceSlip")
-
-
 /*----------------------------- Event Listeners -----------------------------*/
-
-// randBtn.addEventListener('click', ()=> {
-//     fetch("https://foodish-api.herokuapp.com/api/images/biryani")
-//     .then((response) => {
-//         console.log(response)
-//         return response.json()
-//     })
-//     .then((data) => {
-//                 let newImage = {}
-//                 newImage["cat"] = "biryani"
-//                 newImage["image"] = data.image
-//                 biryaniImg.push(newImage)
-//                 render();
-//     })
-//     .catch((err) => {
-//       console.log(err)
-//      });
-//     fetch("https://foodish-api.herokuapp.com/api/images/burger")
-//     .then((response) => {
-//         console.log(response)
-//         return response.json()
-//     })
-//     .then((data) => {
-//                 let newImage = {}
-//                 newImage["cat"] = "burger"
-//                 newImage["image"] = data.image
-//                 burgerImg.push(newImage)
-//                 render();
-//     })
-//     .catch((err) => {
-//       console.log(err)
-//      });
-//     fetch("https://foodish-api.herokuapp.com/api/images/dosa")
-//     .then((response) => {
-//         console.log(response)
-//         return response.json()
-//     })
-//     .then((data) => {
-//                 let newImage = {}
-//                 newImage["cat"] = "dosa"
-//                 newImage["image"] = data.image
-//                 dosaImg.push(newImage)
-//                 render();
-//     })
-//     .catch((err) => {
-//       console.log(err)
-//      });
-//     fetch("https://foodish-api.herokuapp.com/api/images/idly")
-//     .then((response) => {
-//         console.log(response)
-//         return response.json()
-//     })
-//     .then((data) => {
-//                 let newImage = {}
-//                 newImage["cat"] = "idly"
-//                 newImage["image"] = data.image
-//                 idlyImg.push(newImage)
-//                 render();
-//     })
-//     .catch((err) => {
-//       console.log(err)
-//      });
-//     fetch("https://foodish-api.herokuapp.com/api/images/pizza")
-//     .then((response) => {
-//         console.log(response)
-//         return response.json()
-//     })
-//     .then((data) => {
-//                 let newImage = {}
-//                 newImage["cat"] = "pizza"
-//                 newImage["image"] = data.url
-//                 pizzaImg.push(newImage)
-//                 render();
-//     })
-//     .catch((err) => {
-//       console.log(err)
-//      });
-// })
-// const getBiryani = async() => {
-//     fetch("https://foodish-api.herokuapp.com/api/images/biryani")
-//     .then((response) => {
-//         console.log(response.url)
-//         return response.json()
-//     })
-//     .then((data) => {
-//                 let newImage = {}
-//                 newImage["cat"] = "biryani"
-//                 newImage["image"] = data.image
-//                 biryaniImg.push(newImage)
-//                 render();
-//     })
-//     .catch((err) => {
-//       console.log(err)
-//      });
-// }
-
-// const getBurger = async() => {
-//     fetch("https://foodish-api.herokuapp.com/api/images/burger")
-//     .then((response) => {
-//         console.log(response.url)
-//         return response.json()
-//     })
-//     .then((data) => {
-//                 let newImage = {}
-//                 newImage["cat"] = "burger"
-//                 newImage["image"] = data.image
-//                 burgerImg.push(newImage)
-//                 render();
-//     })
-//     .catch((err) => {
-//       console.log(err)
-//      });
-// }
-
-// const getDosa = async() => {
-//     fetch("https://foodish-api.herokuapp.com/api/images/dosa")
-//     .then((response) => {
-//         console.log(response.url)
-//         return response.json()
-//     })
-//     .then((data) => {
-//                 let newImage = {}
-//                 newImage["cat"] = "dosa"
-//                 newImage["image"] = data.image
-//                 dosaImg.push(newImage)
-//                 render();
-//     })
-//     .catch((err) => {
-//       console.log(err)
-//      });
-// }
-
-// const getIdly = async() => {
-//     fetch("https://foodish-api.herokuapp.com/api/images/idly")
-//     .then((response) => {
-//         console.log(response.url)
-//         return response.json()
-//     })
-//     .then((data) => {
-//                 let newImage = {}
-//                 newImage["cat"] = "idly"
-//                 newImage["image"] = data.image
-//                 burgerImg.push(newImage)
-//                 render();
-//     })
-//     .catch((err) => {
-//       console.log(err)
-//      });
-// }
-
-// const getPizza = async() => {
-//     fetch("https://foodish-api.herokuapp.com/api/images/pizza")
-//     .then((response) => {
-//         console.log(response.url)
-//         return response.json()
-//     })
-//     .then((data) => {
-//                 let newImage = {}
-//                 newImage["cat"] = "pizza"
-//                 newImage["image"] = data.image
-//                 pizzaImg.push(newImage)
-//                 render();
-//     })
-//     .catch((err) => {
-//       console.log(err)
-//      });
-// }
-
-// randBtn.addEventListener('click', async() => {
-//     try{
-//         const a = getBiryani();
-//         const b = getBurger();
-//         const c = getDosa();
-//         const d = getIdly();
-//         const e = getPizza();
-
-//         const randomize = await Promise.all([a, b, c, d, e])
-
-//         // throw 'broken!'
-        
-//         return randomize
-        
-
-//     } catch(err) {
-//         console.log(err)
-//         return `It's all gonna be just fine...`
-//         // throw `Get a burger!`
-//     }
-// });
-
-randBtn.addEventListener('click', async() => {
+randBtn.addEventListener('click', async() => {//one event listener using a sync await promise to fetch the APIs
     try{
         const a = fetch("https://foodish-api.herokuapp.com/api/images/biryani");
         const b = fetch("https://foodish-api.herokuapp.com/api/images/burger");
@@ -285,125 +90,53 @@ randBtn.addEventListener('click', async() => {
         const d = fetch("https://foodish-api.herokuapp.com/api/images/idly");
         const e = fetch("https://foodish-api.herokuapp.com/api/images/pizza");
         await Promise.all([a, b, c, d, e])
-        .then(async (results) => {
+        .then(async (results) => {//then function required to json-results in an epty array called jsonRsults
             jsonResults = []
             for (const result of results) {
                 jsonResults.push(await result.json())
             }
-            return jsonResults 
+            return jsonResults//returning an array of objectcs, containing API information 
         })
-        .then(data => {
-            // console.log(data.filter(d => d.image.length > 50).image)//.filter(d => d.image.length > 50)
-            // let d = data[Math.floor(Math.random() * data.length)];
-            // console.log('jhgjjhj: ' + d.image);
-            let newImage = data[Math.floor(Math.random() * data.length)]
+        .then(data => {//then function required to disect the data, from the above array
+            let newImage = data[Math.floor(Math.random() * data.length)]//using this section of code to effectively randomize the APIs and return one value
             newImage["cat"] = "randomAPI"
             newImage["image"] = newImage.image
-            randomImages.push(newImage)
-            render();
+            randomImages.push(newImage)//the variable whith an empty array, ready to receive some values
+            render();//invoke render function to render onto the screen 
             console.log(newImage.image)
         })
     } catch(err) {
-        console.log(err)
+        console.log(err)//standard in a promise in order to find out if there are some errors in the code
     }
 });
 
-// const getRandomImg = async() => {
-//     fetch(jsonResults)
-//     .then((response) => {
-//         console.log(response.url)
-//         return response.json()
-//     })
-//     .then((data) => {
-//         let newImage = {}
-//         newImage["cat"] = "random"
-//         newImage["image"] = data.image
-//         randomImages.push(newImage)
-//         render();
-//     })
-//     .catch(err) 
-//         console.log(err)
-//         return `It's all gonna be just fine...`
-//         // throw `Get a burger!`
-// }
-
-adviseBtn.addEventListener('click', ()=> {
+adviseBtn.addEventListener('click', ()=> {//this is an event listener for the second API which fetches advice
     fetch("https://api.adviceslip.com/advice")
-    .then((response) => {
+    .then((response) => {//then required to return a response from the API that was fetched as a json
         return response.json()
     })
-    .then((data) => {
-                let newAdvice = {}
+    .then((data) => {//then function required to disect the data just received
+                let newAdvice = {}//an epty object is created and a constant is assigned to it
                 newAdvice["artist"] = "GOD"
-                newAdvice["advise"] = data.slip.advice
-                advices.push(newAdvice)
-                render();
+                newAdvice["advise"] = data.slip.advice//in order to pick the specifc part of information that is needed
+                advices.push(newAdvice)//the variable whith an empty array, ready to receive some values
+                render();//invoke render function to render onto the screen 
     })
     .catch((err) => {
       console.log(err)
     });
 })    
 /*-------------------------------- Functions --------------------------------*/
-//function for first API
-// function appendImg(image, cat) {
-//     let newContainer = document.createElement("div")
-//     newContainer.innerHTML = `
-//                                 <div class="card mb-3" id="${cat.toLowerCase()}" style="max-width: 540px;">
-//                                     <div class="row no-gutters">
-//                                         <div class="col-md-4">
-//                                             <img src="${image}" class="card-img" alt="randomizer-picks">
-//                                 </div>
-//                                 <div class="col-md-8">
-//                                     <div class="card-body">
-//                                     <h5 class="card-title">the Randomizer picks...</h5>
-//                                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-//                                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-//                                     </div>
-//                                 </div>
-//                                 </div>
-//                             </div>
-//                             `
-//     container.appendChild(newContainer)
-// }
-
-// function for first API
-
-// let process = (prom) =>{
-//     prom.then(data=>{
-//         let img = document.createElement('img');
-//         img.style.background = data.image;
-//         document.getElementById('containerDiv').appendChild(img);
-//     });       
-// }
-
-function appendImg(image, cat) {
+function appendImg(image, cat) {//In this function the DOM is being manipulated in order to create another div with an image
     let newContainer = document.createElement("div")
     newContainer.innerHTML = `
                                 <div id="${cat.toLowerCase()}" class="flex-container"><img src="${image}" onerror="src='https://thumbs.dreamstime.com/z/funny-dog-wearing-wig-female-clothes-white-background-48441429.jpg'" alt="rand-image." width="350px" height="300px"></div>
                             `
-    container.appendChild(newContainer)
+    container.appendChild(newContainer)//this is an empty div in HTML that's being appended with the above div
 }
 
-
-// .then((dog) => { // then we do the following to the promise, now defined as "dog" ...
-// // console.log(Object.values(dog)[1]); // turn this on for testing
-// let newDog = document.getElementById('randomDogAPIImage'); // create "newDog" and have it set to ID randomDogAPIImage ...
-// newDog.innerHTML = `<div id="dogImageHolder" class="flex-container"><img src="${Object.values(dog)[1]}" onerror="src='https://thumbs.dreamstime.com/z/funny-dog-wearing-wig-female-clothes-white-background-48441429.jpg'" alt="dog." width="350px" height="300px"></div>`; // In "newDog", we now update it with a new div, which we ID as "dogImageHolder" and link it to the value (url) of the API. Also added a default stock photo image to replace any broken links, set the alt text to "dog." and gave it a specific widthe and height.
-// })
-
-
-
-/*{ <div class="card h-100" id="${cat.toLowerCase()}">
-                            <div class="card-body">
-                                <blockquote class="blockquote mb-0">
-                                     <img id="pick" class="getPick" src="${image}" alt="randomizer-picks">
-                                     <footer class="blockquote-footer">${cat}</footer>
-                                </blockquote>
-                            </div>
-                            </div>  }*/
-
 //function for second APi
-function appendDiv(advice, artist) {
+function appendDiv(advice, artist) {//In this function the DOM is being manipulated in order to create another div with an image
     let newDiv = document.createElement("div")
     newDiv.innerHTML = `
                         <div class="card h-100" id="${artist.toLowerCase()}">
@@ -415,17 +148,10 @@ function appendDiv(advice, artist) {
                             </div>
                             </div>    
                         `
-    slip.appendChild(newDiv)
+    slip.appendChild(newDiv)//this is an empty div in HTML that's being appended with the above div
 }
 
-// function render() {
-//     container.innerHTML = ""
-//     allImages.forEach((cat, idx) => {
-//         appendDiv(cat["image"], cat["cat"], idx)
-//     })
-// };
-
-function render() {
+function render() {//nothing will render on screen without this function. It has already been invoked by each respective API function
     container.innerHTML = ""
     randomImages.forEach((image, idx) => {
         appendImg(image["image"], image["cat"], idx)
@@ -436,7 +162,3 @@ function render() {
     });
 }
 
-// function deleteAdvise(idx){
-//     advices.splice(idx, 1)
-//     render()
-// }
