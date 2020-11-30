@@ -12,23 +12,6 @@
 
 
 
-
-//Work to be done for this project
-// Link references to APIs, style document, and javascript document
-
-// Make HTML elements
-
-// add class/id where necessary
-
-// CSS styling of body and children of body
-
-// CSS styling to include body styling, button and carousel div, card div, and side.
-
-// JS  constants, variables, cached elements, event listeners, and functions.
-
-
-
-
 //Javascript stuff
 // 1) Define the required constants:
 
@@ -111,11 +94,11 @@ adviseBtn.addEventListener('click', ()=> {//this is an event listener for the se
         return response.json()
     })
     .then((data) => {//then function required to disect the data just received
-                let newAdvice = {}//an epty object is created and a constant is assigned to it
-                newAdvice["artist"] = "GOD"
-                newAdvice["advise"] = data.slip.advice//in order to pick the specifc part of information that is needed
-                advices.push(newAdvice)//the variable whith an empty array, ready to receive some values
-                render();//invoke render function to render onto the screen 
+        let newAdvice = {}//an epty object is created and a constant is assigned to it
+        newAdvice["artist"] = "GOD"
+        newAdvice["advise"] = data.slip.advice//in order to pick the specifc part of information that is needed
+        advices.push(newAdvice)//the variable whith an empty array, ready to receive some values
+        render();//invoke render function to render onto the screen 
     })
     .catch((err) => {
       console.log(err)
