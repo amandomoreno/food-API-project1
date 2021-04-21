@@ -7,12 +7,12 @@ Foodies Roulette generates random images of food, which can be used as a way to 
 Don't forget to get a fortune cookie on your way out!
 
 
-#### A quick look into my idea:
+### A quick look into my idea:
 
 ![Sketch](https://i.imgur.com/SHAiggJ.jpg?1)  
 ![Wire frames](https://i.imgur.com/govqVti.png)  
 
-Using Postman to GET data from APIs:
+### Using Postman to GET data from APIs:
 
 ![Postman](https://i.imgur.com/lc18WGM.png)  
 
@@ -25,7 +25,7 @@ Responsive design rocks!
 ![Function](https://i.imgur.com/PK4ysJ2.png) 
 
 
-### Technology: HTML, CSS, JavaScript
+### Technology: HTML, CSS, JavaScript, MongoDB, Mongoose, Postman, GitHub, Whimsical
 
 ### Icebox:
 - [ ] category description from the image being rendered
