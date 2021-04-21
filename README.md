@@ -1,5 +1,7 @@
 # FOODIES ROULETTE
 
+### Get Started: [Visit Foodies Roulette](http://tightfisted-bird.surge.sh/)
+
 Foodies Roulette generates random images of food, which can be used as a way to pick out a food category when you're undecided. Pick between biryani, burger, dosa, idly and pizza.
 
 Don't forget to get a fortune cookie on your way out!
@@ -22,7 +24,6 @@ Responsive design rocks!
 ![Mobile App](https://i.imgur.com/8PO4R1P.png) 
 ![Function](https://i.imgur.com/PK4ysJ2.png) 
 
-### Get Started: [Visit Foodies Roulette](http://tightfisted-bird.surge.sh/)
 
 ### Technology: HTML, CSS, JavaScript
 
