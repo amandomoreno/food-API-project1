@@ -15,18 +15,18 @@ Don't forget to get a fortune cookie on your way out!
   <img src="your_relative_path_here_number_2_large_name" width="350" alt="accessibility text">
 </p> -->
 
-![Sketch](https://i.imgur.com/SHAiggJ.jpg?1/350)  
-![Wire frames](https://i.imgur.com/govqVti.png)  
+![Sketch](https://i.imgur.com/SHAiggJ.jpg?1 | width=500)  
+![Wireframes](https://i.imgur.com/govqVti.png | width=500)  
 
 ### Using Postman to GET data from APIs:
 
-![Postman](https://i.imgur.com/lc18WGM.png)  
+![Postman](https://i.imgur.com/lc18WGM.png | width=500)  
 
 ### Here's the final result. Enjoy!
 
 Responsive design rocks!
-![Working App](https://i.imgur.com/aypVH83.png) 
-![Function](https://i.imgur.com/GaZenpY.png) 
+![Working App](https://i.imgur.com/aypVH83.png | width=500) 
+![Function](https://i.imgur.com/GaZenpY.png | width=500) 
 ![Mobile App](https://i.imgur.com/8PO4R1P.png) 
 ![Function](https://i.imgur.com/PK4ysJ2.png) 
 
