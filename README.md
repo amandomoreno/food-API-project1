@@ -12,18 +12,18 @@ Don't forget to get a fortune cookie on your way out!
 
 ### A quick look into my idea:
 
-![Wireframe](https://i.imgur.com/SHAiggJ.jpg?1 =350x250)  
-![FidelityWireframe](https://i.imgur.com/govqVti.png =350x250)  
+![](https://i.imgur.com/SHAiggJ.jpg?1 =250x250)  
+![](https://i.imgur.com/govqVti.png =350x250)  
 
 ### Using Postman to GET data from APIs:
 
-![Postman](https://i.imgur.com/lc18WGM.png =350x250)  
+![](https://i.imgur.com/lc18WGM.png =350x250)  
 
 ### Here's the final result. Enjoy!
 
 Responsive design rocks!
-![Web App](https://i.imgur.com/aypVH83.png =350x250) 
-![Function](https://i.imgur.com/GaZenpY.png =350x250) 
+![](https://i.imgur.com/aypVH83.png =350x250) 
+![](https://i.imgur.com/GaZenpY.png =350x250) 
 ![Mobile App](https://i.imgur.com/8PO4R1P.png) 
 ![Function](https://i.imgur.com/PK4ysJ2.png) 
 
